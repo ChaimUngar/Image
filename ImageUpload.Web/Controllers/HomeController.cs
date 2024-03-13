@@ -60,7 +60,7 @@ namespace ImageUpload.Web.Controllers
             if (image.Password != password)
             {
                 vm.Message = "Invalid password!!!!";
-                return RedirectToAction("viewimage");
+                return View(image);
             }
 
             if (image.Password == password && !idsViewed.Contains(image.Id))
