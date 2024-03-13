@@ -57,7 +57,7 @@ namespace ImageUpload.Web.Controllers
             var repo = new ImageRepository(_connectionString);
             image = repo.GetById(image.Id);
 
-            if (image.Password != password || password == null)
+            if (image.Password != password)
             {
                 vm.Message = "Invalid password!!!!";
                 return View(image);
